@@ -1,0 +1,163 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Lora', serif;
+	overflow-x: hidden
+	background-color: #f3f7fa
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+
+
+.logo
+	display: flex
+	justify-content: center
+	width: 20%
+	margin: 0 auto
+	margin-top: 30px
+	img	
+		height: 30px
+	h3
+		padding-left: 10px
+		color: #00b0dd	
+
+.side-bar
+	margin-top: 50px
+	box-shadow: 0 0 10px rgba(0,0,0,0.5)
+	position: fixed
+	height: 200px
+	background-color: #ffffff
+	border-radius: 5px
+	.caption
+		margin-top: 18px;
+	ul
+		padding: 0
+		margin-top: 10px
+		li
+			list-style-type: none
+			cursor: pointer
+			width: 210px
+			padding-left: 10px
+			&:hover
+				background-color: #f3f7fa
+				.hidden 
+					visibility: visible
+					opacity: 1
+					transition: all 0.5s ease
+			label
+				position: absolute
+				left: 40px
+
+.hidden 
+	color: #01B0DD
+	visibility: hidden
+	opacity: 0
+	transition: all 0.5s ease
+	font-size: 16px
+	position: absolute
+	right: 10%
+	cursor: pointer
+	&:hover
+		color: #ff6d00
+			
+
+#tickets
+	position: absolute
+	width: 800px
+	right: 150px
+	height: 100%
+	top: 90px
+	.block-tickets
+		display: flex
+		background-color: white
+		margin-top: 50px
+		height: 160px 
+		position: relative
+		border-radius: 5px
+		box-shadow: 0 0 10px rgba(0,0,0,0.5)
+		&:first-child
+			margin-top: 0
+		.buy-ticket
+			width: 25.5%
+			height: 100%
+			box-shadow: 0 2px 5px rgba(0,0,0,0.5)
+			.price
+				position: absolute
+				height: 50px
+				width: 150px
+				background-color: #ff6d00
+				left: 25px
+				top: 95px
+				border-radius: 10px
+				display: flex
+				justify-content: center
+				box-shadow: 0 0 10px rgba(0,0,0,0.5)
+				cursor: pointer
+				outline: none
+				border: 0
+				color: white
+				&:active
+					top: 97px
+					left: 26px
+				&:hover
+					background-color: #f59a56
+			.name-company
+				position: absolute
+				width: inherit
+				display: flex
+				justify-content: center
+				height: 80px
+				padding: 20px
+				font-size: 17px
+				border-radius: 5px 5px 0 0
+				box-shadow: 0 0 1px rgba(0,0,0,0.5)
+				img
+					height: 30px
+					width: 30px
+					margin-left: 5px
+		.directions
+			position: relative
+			width: 74.5%
+			display: flex
+			justify-content: space-between
+			padding: 18px 60px
+			.dir-item
+				.dir-time
+					font-size: 40px
+				.dir-city
+					font-size: 16px
+				.dir-date
+					font-size: 14px
+					color: lighten(black, 60%)
+		
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+
+@import "media" // Always at the end
