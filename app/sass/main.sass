@@ -81,6 +81,17 @@ body
 	&:hover
 		color: #ff6d00
 			
+.hiddenBlock
+	visibility: collapse
+	opacity: 0
+	transition: all 0.5s ease
+	height: 0
+
+.display
+	visibility: visible
+	opacity: 1
+	transition: all 0.5s ease
+	height: auto
 
 #tickets
 	position: absolute
@@ -132,7 +143,7 @@ body
 				font-size: 17px
 				border-radius: 5px 5px 0 0
 				box-shadow: 0 0 1px rgba(0,0,0,0.5)
-				img
+				logo-company
 					height: 30px
 					width: 30px
 					margin-left: 5px
