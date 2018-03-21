@@ -87,7 +87,7 @@ window.onload = function(){
         });
     }
 
-    function toggleAnimation(content){
+    function toggleAnimation(container){
         if(container.classList.contains('hiddenBlock')){
             container.classList.remove('hiddenBlock');
             container.classList.add('display');
